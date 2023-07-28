@@ -5,7 +5,7 @@ function Navbar() {
   const menuItems = (
     <>
       <li>
-        <a>Home</a>
+        <Link href="/">Home</Link>
       </li>
       <li tabIndex={0}>
         <details>
@@ -85,7 +85,9 @@ function Navbar() {
           <ul className="menu menu-horizontal px-1">{menuItems}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <Link href="/login" className="btn">
+            Login
+          </Link>
         </div>
       </div>
     </div>
