@@ -12,9 +12,7 @@ function TopCategories() {
   return (
     <div className="mt-20 mx-20 ">
       <div className="text-center my-10">
-        <h1 className="text-4xl font-bold uppercase font-semibold">
-          Top Categories
-        </h1>
+        <h1 className="text-4xl font-bold  font-semibold">Top Categories</h1>
         <p className="text-lg mt-2">
           Get Your Desired Product from Featured Category!
         </p>
@@ -22,8 +20,8 @@ function TopCategories() {
       <hr />
       <br />
       <div className="flex justify-between gap-5">
-        <div className="col-span-1 mr-10 mx-auto">
-          <Image src={monitor} alt="monitor" className="w-32" />
+        <div className="col-span-1 mr-10 mx-auto  ">
+          <Image src={monitor} alt="monitor" className="w-32  " />
           <div className="text-center mt-5">
             <h2>Monitor</h2>
           </div>
