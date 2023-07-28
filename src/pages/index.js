@@ -1,11 +1,16 @@
-import React from "react";
+import RootLayout from "@/components/Layouts/RootLayout";
+import HomePageBanner from "@/components/UI/Banner";
 
 function HomePage() {
   return (
     <div>
-      <h1 className="text-5xl">Home Page</h1>
+      <HomePageBanner />
     </div>
   );
 }
 
 export default HomePage;
+
+HomePage.getLayout = function getLayout(page) {
+  return <RootLayout>{page}</RootLayout>;
+};
