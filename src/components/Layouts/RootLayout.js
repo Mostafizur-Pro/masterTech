@@ -1,3 +1,4 @@
+import Footer from "../shared/Footer";
 import Navbar from "../shared/Navbar";
 
 function RootLayout({ children }) {
@@ -5,6 +6,7 @@ function RootLayout({ children }) {
     <div>
       <Navbar />
       {children}
+      <Footer />
     </div>
   );
 }
