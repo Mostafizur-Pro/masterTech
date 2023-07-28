@@ -10,7 +10,7 @@ function Navbar() {
       <li tabIndex={0}>
         <details>
           <summary>Component</summary>
-          <ul className="w-60 p-2">
+          <ul className="w-60 p-2  bg-white  z-40">
             <li>
               <a>CPU/Processor</a>
             </li>

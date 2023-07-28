@@ -1,10 +1,12 @@
 import RootLayout from "@/components/Layouts/RootLayout";
 import HomePageBanner from "@/components/UI/Banner";
+import TopCategories from "@/components/UI/TopCategories";
 
 function HomePage() {
   return (
     <div>
       <HomePageBanner />
+      <TopCategories />
     </div>
   );
 }
