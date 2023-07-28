@@ -1,5 +1,7 @@
 import Link from "next/link";
 import React from "react";
+import CustomButton from "../hooks/Button";
+import { RxAvatar } from "react-icons/rx";
 
 function Navbar() {
   const menuItems = (
@@ -49,9 +51,9 @@ function Navbar() {
 
   return (
     <div>
-      <div className="navbar bg-base-100">
-        <div className="navbar-start">
-          <div className="dropdown">
+      <div>
+        <div className="navbar bg-slate-900 text-white ">
+          <div className="dropdown ">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -75,20 +77,82 @@ function Navbar() {
               {menuItems}
             </ul>
           </div>
-          <div className="btn btn-ghost normal-case text-xl">
+          <div className="flex-1 text-2xl  font-bold">
             <p>
-              MASTER<span className="text-success font-bold">TECH</span>
+              MASTER<span className="text-success">TECH</span>
             </p>
           </div>
+
+          <div className="flex-none gap-2">
+            <div className="form-control">
+              <input
+                type="text"
+                placeholder="Search"
+                className="input input-bordered w-24 md:w-auto"
+              />
+            </div>
+            <div className="text-center flex gap-4 mx-5">
+              <div className="text-5xl text-success ">
+                {" "}
+                <RxAvatar />
+              </div>
+              <div>
+                <h1 className="text-xl font-bold">Account</h1>
+                <h3 className="flex">
+                  <Link href="/signup" className="hover:text-success">
+                    Register{" "}
+                  </Link>
+                  <p> / </p>
+                  <Link href="/login" className="hover:text-success">
+                    {" "}
+                    Login
+                  </Link>
+                </h3>
+              </div>
+            </div>
+            <div className="navbar-end">
+              <CustomButton>
+                <Link href="/login">PC Builder</Link>
+              </CustomButton>
+            </div>
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <a className="justify-between">
+                    Profile
+                    <span className="badge">New</span>
+                  </a>
+                </li>
+                <li>
+                  <a>Settings</a>
+                </li>
+                <li>
+                  <a>Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
+      {/* Part 2 */}
+      <div className="navbar hidden lg:flex bg-base-100">
+        <div className="navbar-start"></div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{menuItems}</ul>
         </div>
-        <div className="navbar-end">
+        {/* <div className="navbar-end">
           <Link href="/login" className="btn">
             Login
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );

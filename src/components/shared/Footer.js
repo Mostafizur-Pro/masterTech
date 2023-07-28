@@ -1,11 +1,10 @@
 function Footer() {
   return (
-    <div className="mt-10">
-      <hr />
+    <div className="mt-10 bg-slate-900 text-white">
       <footer className="footer footer-center p-10 ">
         <div>
-          <h1 className="text-3xl">
-            MASTER<span className="text-success font-bold">TECH</span>
+          <h1 className="text-3xl font-bold ">
+            MASTER<span className="text-success ">TECH</span>
           </h1>
           <p className="font-bold">
             MASTERTECH Ltd. <br />
