@@ -5,7 +5,7 @@ function FeatureProducts({ products }) {
   if (!products) {
     return <div>Loading...</div>;
   }
-  // console.log("pro", products);
+  console.log("pro", products);
   return (
     <div className="my-20 mx-20 ">
       <div className="text-center my-10">
@@ -31,7 +31,14 @@ function FeatureProducts({ products }) {
                         <img className="w-48" src={product?.imageUrl} alt="" />
                         <h3 className="text-lg font-semibold">
                           {product?.name}
+                          <div className="badge badge-accent ml-2">
+                            {product?.status}
+                          </div>
                         </h3>
+                        <p>Category : {product?.categoryName}</p>
+                        <p>Price : {product?.price}</p>
+
+                        <p>Rating : {product?.ratings}</p>
                       </div>
                     </div>
                   </Link>
@@ -60,7 +67,14 @@ function FeatureProducts({ products }) {
                         <img className="w-48" src={product?.imageUrl} alt="" />
                         <h3 className="text-lg font-semibold">
                           {product?.name}
+                          <div className="badge badge-accent ml-2">
+                            {product?.status}
+                          </div>
                         </h3>
+                        <p>Category : {product?.categoryName}</p>
+                        <p>Price : {product?.price}</p>
+
+                        <p>Rating : {product?.ratings}</p>
                       </div>
                     </div>
                   </Link>
@@ -89,7 +103,14 @@ function FeatureProducts({ products }) {
                         <img className="w-48" src={product?.imageUrl} alt="" />
                         <h3 className="text-lg font-semibold">
                           {product?.name}
+                          <div className="badge badge-accent ml-2">
+                            {product?.status}
+                          </div>
                         </h3>
+                        <p>Category : {product?.categoryName}</p>
+                        <p>Price : {product?.price}</p>
+
+                        <p>Rating : {product?.ratings}</p>
                       </div>
                     </div>
                   </Link>
@@ -118,7 +139,14 @@ function FeatureProducts({ products }) {
                         <img className="w-48" src={product?.imageUrl} alt="" />
                         <h3 className="text-lg font-semibold">
                           {product?.name}
+                          <div className="badge badge-accent ml-2">
+                            {product?.status}
+                          </div>
                         </h3>
+                        <p>Category : {product?.categoryName}</p>
+                        <p>Price : {product?.price}</p>
+
+                        <p>Rating : {product?.ratings}</p>
                       </div>
                     </div>
                   </Link>
@@ -147,7 +175,14 @@ function FeatureProducts({ products }) {
                         <img className="w-48" src={product?.imageUrl} alt="" />
                         <h3 className="text-lg font-semibold">
                           {product?.name}
+                          <div className="badge badge-accent ml-2">
+                            {product?.status}
+                          </div>
                         </h3>
+                        <p>Category : {product?.categoryName}</p>
+                        <p>Price : {product?.price}</p>
+
+                        <p>Rating : {product?.ratings}</p>
                       </div>
                     </div>
                   </Link>
@@ -176,7 +211,14 @@ function FeatureProducts({ products }) {
                         <img className="w-48" src={product?.imageUrl} alt="" />
                         <h3 className="text-lg font-semibold">
                           {product?.name}
+                          <div className="badge badge-accent ml-2">
+                            {product?.status}
+                          </div>
                         </h3>
+                        <p>Category : {product?.categoryName}</p>
+                        <p>Price : {product?.price}</p>
+
+                        <p>Rating : {product?.ratings}</p>
                       </div>
                     </div>
                   </Link>
@@ -205,7 +247,14 @@ function FeatureProducts({ products }) {
                         <img className="w-48" src={product?.imageUrl} alt="" />
                         <h3 className="text-lg font-semibold">
                           {product?.name}
+                          <div className="badge badge-accent ml-2">
+                            {product?.status}
+                          </div>
                         </h3>
+                        <p>Category : {product?.categoryName}</p>
+                        <p>Price : {product?.price}</p>
+
+                        <p>Rating : {product?.ratings}</p>
                       </div>
                     </div>
                   </Link>
@@ -234,7 +283,14 @@ function FeatureProducts({ products }) {
                         <img className="w-48" src={product?.imageUrl} alt="" />
                         <h3 className="text-lg font-semibold">
                           {product?.name}
+                          <div className="badge badge-accent ml-2">
+                            {product?.status}
+                          </div>
                         </h3>
+                        <p>Category : {product?.categoryName}</p>
+                        <p>Price : {product?.price}</p>
+
+                        <p>Rating : {product?.ratings}</p>
                       </div>
                     </div>
                   </Link>
@@ -263,7 +319,14 @@ function FeatureProducts({ products }) {
                         <img className="w-48" src={product?.imageUrl} alt="" />
                         <h3 className="text-lg font-semibold">
                           {product?.name}
+                          <div className="badge badge-accent ml-2">
+                            {product?.status}
+                          </div>
                         </h3>
+                        <p>Category : {product?.categoryName}</p>
+                        <p>Price : {product?.price}</p>
+
+                        <p>Rating : {product?.ratings}</p>
                       </div>
                     </div>
                   </Link>

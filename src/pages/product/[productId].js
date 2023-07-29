@@ -3,7 +3,8 @@ import ProductHomePage from "@/components/UI/Product";
 import ProductBanner from "@/components/UI/ProductBanner";
 import Link from "next/link";
 
-function DynamicProductPage() {
+function DynamicProductPage({ product }) {
+  console.log("Dynamic", product);
   return (
     <div>
       <div>
@@ -53,6 +54,29 @@ function DynamicProductPage() {
 }
 
 export default DynamicProductPage;
+
+export const getStaticPaths = async () => {
+  const res = await fetch(`http://localhost:5000/products`);
+  const products = await res.json();
+
+  const paths = products?.map((product) => ({
+    params: { productId: product._id },
+  }));
+
+  return { paths, fallback: false };
+};
+
+export const getStaticProps = async (context) => {
+  const { params } = context;
+  const res = await fetch(`http://localhost:5000/products/${params.productId}`);
+  const data = await res.json();
+
+  return {
+    props: {
+      product: data,
+    },
+  };
+};
 
 DynamicProductPage.getLayout = function getLayout(page) {
   return <ProductLayout>{page}</ProductLayout>;
