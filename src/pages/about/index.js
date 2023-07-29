@@ -129,7 +129,7 @@ function AboutHomePage() {
               <img
                 className="rounded-full border"
                 src="https://i.ibb.co/hKM32TN/01.jpg"
-                alt=""
+                alt="profile image"
               />
             </div>
           </aside>

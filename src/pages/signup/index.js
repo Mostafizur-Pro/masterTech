@@ -3,8 +3,15 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import loginImage from "@/assets/login/login.gif";
 import Image from "next/image";
+import auth from "@/firebase/firebase.auth";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function SignUp() {
+  const notify = () => toast("SignUp Successfully");
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
   const {
     register,
     handleSubmit,
@@ -14,7 +21,8 @@ function SignUp() {
 
   const onSubmit = (data) => {
     console.log(data);
-    // Add registration logic here
+    createUserWithEmailAndPassword(data.email, data.password);
+    notify();
   };
   return (
     <div>
@@ -85,27 +93,6 @@ function SignUp() {
                 {errors.password && (
                   <p className="text-red-500 text-sm mt-1">
                     Password must be at least 6 characters
-                  </p>
-                )}
-              </div>
-              <div>
-                <label htmlFor="confirmPassword" className="sr-only">
-                  Confirm Password
-                </label>
-                <input
-                  {...register("confirmPassword", {
-                    required: true,
-                    validate: (value) => value === password,
-                  })}
-                  id="confirmPassword"
-                  type="password"
-                  required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Confirm Password"
-                />
-                {errors.confirmPassword && (
-                  <p className="text-red-500 text-sm mt-1">
-                    Passwords must match
                   </p>
                 )}
                 <p className="text-gray-400 mt-2">
