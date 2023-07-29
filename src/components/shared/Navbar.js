@@ -4,13 +4,15 @@ import CustomButton from "../hooks/Button";
 import { RxAvatar } from "react-icons/rx";
 import auth from "@/firebase/firebase.auth";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { signOut } from "firebase/auth";
+import { signOut as firebaseSignOut } from "firebase/auth";
+import { useSession, signOut } from "next-auth/react";
 
 function Navbar() {
   const [user, loading, error] = useAuthState(auth);
+  const { data: session } = useSession();
   // console.log("user", user);
   const logout = () => {
-    signOut(auth);
+    firebaseSignOut(auth);
   };
   const menuItems = (
     <>
@@ -123,7 +125,7 @@ function Navbar() {
                 <Link href="/login">PC Builder</Link>
               </CustomButton>
             </div>
-            {user?.email && (
+            {user?.email || session?.user?.email ? (
               <>
                 <div className="dropdown text-black dropdown-end">
                   <label
@@ -147,12 +149,25 @@ function Navbar() {
                     <li>
                       <a>Settings</a>
                     </li>
-                    <li>
-                      <a onClick={logout}>Logout</a>
-                    </li>
+                    {user?.email && (
+                      <>
+                        <li>
+                          <a onClick={logout}>Logout</a>
+                        </li>
+                      </>
+                    )}
+                    {session?.user?.email && (
+                      <>
+                        <li>
+                          <a onClick={() => signOut()}>Logout</a>
+                        </li>
+                      </>
+                    )}
                   </ul>
                 </div>
               </>
+            ) : (
+              <></>
             )}
           </div>
         </div>

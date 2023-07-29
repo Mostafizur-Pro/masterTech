@@ -6,6 +6,7 @@ import Image from "next/image";
 import auth from "@/firebase/firebase.auth";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import { signIn } from "next-auth/react";
 
 function LoginPage() {
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -116,7 +117,7 @@ function LoginPage() {
           <div
             className="text-7xl hover:text-success"
             onClick={() =>
-              signIn("google", { callbackUrl: "http://localhost:3000" })
+              signIn("github", { callbackUrl: "http://localhost:3000" })
             }
           >
             <FaGithub />
