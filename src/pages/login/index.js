@@ -3,8 +3,13 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import loginImage from "@/assets/login/login.gif";
 import Image from "next/image";
+import auth from "@/firebase/firebase.auth";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
 function LoginPage() {
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
   const {
     register,
     handleSubmit,
@@ -13,6 +18,7 @@ function LoginPage() {
 
   const onSubmit = (data) => {
     console.log(data);
+    signInWithEmailAndPassword(data.email, data.password);
     // Add login logic here
   };
   return (
@@ -97,13 +103,23 @@ function LoginPage() {
             </button>
           </div>
         </form>
-        <div className="flex flex-col w-full lg:flex-row">
-          <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">
-            Google
+        <div className="flex flex-col justify-center items-center w-full lg:flex-row">
+          <div
+            className="text-7xl hover:text-success"
+            onClick={() =>
+              signIn("google", { callbackUrl: "http://localhost:3000" })
+            }
+          >
+            <FaGoogle />
           </div>
           <div className="divider lg:divider-horizontal">OR</div>
-          <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">
-            GitHub
+          <div
+            className="text-7xl hover:text-success"
+            onClick={() =>
+              signIn("google", { callbackUrl: "http://localhost:3000" })
+            }
+          >
+            <FaGithub />
           </div>
         </div>
       </div>

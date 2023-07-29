@@ -4,10 +4,14 @@ import CustomButton from "../hooks/Button";
 import { RxAvatar } from "react-icons/rx";
 import auth from "@/firebase/firebase.auth";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { signOut } from "firebase/auth";
 
 function Navbar() {
   const [user, loading, error] = useAuthState(auth);
-  console.log("user", user);
+  // console.log("user", user);
+  const logout = () => {
+    signOut(auth);
+  };
   const menuItems = (
     <>
       <li>
@@ -119,30 +123,37 @@ function Navbar() {
                 <Link href="/login">PC Builder</Link>
               </CustomButton>
             </div>
-            <div className="dropdown text-black dropdown-end">
-              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                <div className="w-10 rounded-full">
-                  <img src="https://i.ibb.co/hKM32TN/01.jpg" />
+            {user?.email && (
+              <>
+                <div className="dropdown text-black dropdown-end">
+                  <label
+                    tabIndex={0}
+                    className="btn btn-ghost btn-circle avatar"
+                  >
+                    <div className="w-10 rounded-full">
+                      <img src="https://i.ibb.co/hKM32TN/01.jpg" />
+                    </div>
+                  </label>
+                  <ul
+                    tabIndex={0}
+                    className="mt-3  z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                  >
+                    <li>
+                      <a className="justify-between">
+                        Profile
+                        {/* <span className="badge">New</span> */}
+                      </a>
+                    </li>
+                    <li>
+                      <a>Settings</a>
+                    </li>
+                    <li>
+                      <a onClick={logout}>Logout</a>
+                    </li>
+                  </ul>
                 </div>
-              </label>
-              <ul
-                tabIndex={0}
-                className="mt-3  z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
-              >
-                <li>
-                  <a className="justify-between">
-                    Profile
-                    {/* <span className="badge">New</span> */}
-                  </a>
-                </li>
-                <li>
-                  <a>Settings</a>
-                </li>
-                <li>
-                  <a>Logout</a>
-                </li>
-              </ul>
-            </div>
+              </>
+            )}
           </div>
         </div>
       </div>
