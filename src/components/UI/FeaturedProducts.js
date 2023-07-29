@@ -3,7 +3,10 @@ import Link from "next/link";
 import React from "react";
 
 function FeatureProducts({ products }) {
-  console.log("pro", products);
+  if (!products) {
+    return <div>Loading...</div>;
+  }
+  // console.log("pro", products);
   return (
     <div className="my-20 mx-20 ">
       <div className="text-center my-10">
@@ -23,7 +26,7 @@ function FeatureProducts({ products }) {
             <>
               {product?.categoryName === "Processor" && (
                 <>
-                  <Link href={`/product/${product?.name}`} key={product?._id}>
+                  <Link href={`/product/${product?._id}`} key={product?._id}>
                     <div className="">
                       <div className=" p-5 rounded-2xl ">
                         <img className="w-48" src={product?.imageUrl} alt="" />

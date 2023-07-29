@@ -19,13 +19,28 @@ async function run(req, res) {
     const productCollection = client.db("master-tech").collection("products");
 
     if (req.method === "GET") {
-      const products = await productCollection.find({}).toArray();
-      res.send({ message: "Success", statur: 200, data: products });
-    }
-    if (req.method === "POST") {
-      const products = req.body;
-      const result = await productCollection.insertOne(products);
-      res.send(result);
+      if (!req.query.id) {
+        const products = await productCollection.find({}).toArray();
+        return res
+          .status(200)
+          .json({ message: "Success", status: 200, data: products });
+      } else {
+        const id = req.query.id;
+        const query = { _id: new ObjectId(id) };
+        const product = await productCollection.findOne(query);
+
+        if (!product) {
+          return res
+            .status(404)
+            .json({ message: "Product not found", status: 404 });
+        }
+
+        return res
+          .status(200)
+          .json({ message: "Success", status: 200, data: product });
+      }
+    } else {
+      return res.status(405).json({ message: "Method Not Allowed" });
     }
   } finally {
   }
