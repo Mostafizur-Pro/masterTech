@@ -122,7 +122,7 @@ function Navbar() {
             </div>
             <div className="navbar-end">
               <CustomButton>
-                <Link href="/login">PC Builder</Link>
+                <Link href="/pcbuilder">PC Builder</Link>
               </CustomButton>
             </div>
             {user?.email || session?.user?.email ? (

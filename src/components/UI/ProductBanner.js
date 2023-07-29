@@ -1,7 +1,5 @@
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa";
-// import banner from "@/assets/product/banner.png";
-import banner from "../../assets/product/banner.png";
 
 function ProductBanner() {
   return (
