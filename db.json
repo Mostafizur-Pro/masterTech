@@ -1,0 +1,75 @@
+{
+  "products": [
+    {
+      "image": "https://example.com/images/pc_component1.jpg",
+      "productName": "Graphics Card",
+      "category": "Graphics Cards",
+      "status": "In Stock",
+      "price": 299.99,
+      "description": "High-performance graphics card for gaming enthusiasts.",
+      "keyFeatures": {
+        "Brand": "Nvidia",
+        "Model": "GeForce RTX 3080",
+        "Specification": "8GB GDDR6",
+        "Port": "PCI Express 4.0",
+        "Type": "Discrete Graphics Card",
+        "Resolution": "4K",
+        "Voltage": "12V"
+      },
+      "individualRating": 4.8,
+      "averageRating": 4.5,
+      "reviews": [
+        {
+          "username": "user123",
+          "rating": 5,
+          "comment": "Excellent graphics card, highly recommended!"
+        },
+        {
+          "username": "gamer99",
+          "rating": 4,
+          "comment": "Great performance, but a bit pricey."
+        }
+      ]
+    },
+    {
+      "image": "https://example.com/images/pc_component2.jpg",
+      "productName": "CPU Processor",
+      "category": "Processors",
+      "status": "Out of Stock",
+      "price": 379.99,
+      "description": "High-performance CPU for multitasking and gaming.",
+      "keyFeatures": {
+        "Brand": "Intel",
+        "Model": "Core i9-11900K",
+        "Specification": "8 Cores, 16 Threads",
+        "Port": "LGA1200",
+        "Type": "Desktop Processor",
+        "Voltage": "1.35V"
+      },
+      "individualRating": 4.9,
+      "averageRating": 4.7,
+      "reviews": [
+        {
+          "username": "pcbuilder1",
+          "rating": 5,
+          "comment": "Fast and reliable processor, worth the price."
+        },
+        {
+          "username": "techgeek",
+          "rating": 4,
+          "comment": "Great performance, but could be more power-efficient."
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

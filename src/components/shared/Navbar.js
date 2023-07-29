@@ -78,9 +78,9 @@ function Navbar() {
             </ul>
           </div>
           <div className="flex-1 text-2xl  font-bold">
-            <p>
+            <Link href="/">
               MASTER<span className="text-success">TECH</span>
-            </p>
+            </Link>
           </div>
 
           <div className="flex-none gap-2">
@@ -146,7 +146,7 @@ function Navbar() {
       <div className="navbar hidden lg:flex bg-base-100">
         <div className="navbar-start"></div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{menuItems}</ul>
+          <ul className="menu menu-horizontal text-2xl px-1">{menuItems}</ul>
         </div>
         {/* <div className="navbar-end">
           <Link href="/login" className="btn">
