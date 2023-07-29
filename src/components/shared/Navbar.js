@@ -24,31 +24,31 @@ function Navbar() {
           <summary>Component</summary>
           <ul className="w-60 p-2  bg-white  z-40">
             <li>
-              <a>CPU/Processor</a>
+              <Link href="/product/processor">CPU/Processor</Link>
             </li>
             <hr />
             <li>
-              <a>Motherboard</a>
+              <Link href="/product/motherboard">Motherboard</Link>
             </li>
             <hr />
             <li>
-              <a>RAM</a>
+              <Link href="/product/ram">RAM</Link>
             </li>
             <hr />
             <li>
-              <a>Power Supply Unit</a>
+              <Link href="/product/power-supply">Power Supply Unit</Link>
             </li>
             <hr />
             <li>
-              <a>Storage Device</a>
+              <Link href="/product/storage">Storage Device</Link>
             </li>
             <hr />
             <li>
-              <a>Monitor</a>
+              <Link href="/product/monitor">Monitor</Link>
             </li>
             <hr />
             <li>
-              <a>Others</a>
+              <Link href="/product/others">Others</Link>
             </li>
           </ul>
         </details>
@@ -82,7 +82,7 @@ function Navbar() {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 text-xl text-black rounded-box w-52"
             >
               {menuItems}
             </ul>
@@ -173,17 +173,6 @@ function Navbar() {
         </div>
       </div>
       {/* Part 2 */}
-      <div className="navbar hidden lg:flex bg-base-100">
-        <div className="navbar-start"></div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal text-2xl px-1">{menuItems}</ul>
-        </div>
-        {/* <div className="navbar-end">
-          <Link href="/login" className="btn">
-            Login
-          </Link>
-        </div> */}
-      </div>
     </div>
   );
 }

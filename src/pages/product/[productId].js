@@ -1,43 +1,59 @@
-import RootLayout from "@/components/Layouts/RootLayout";
-import React from "react";
+import ProductLayout from "@/components/Layouts/ProductLayout";
+import ProductHomePage from "@/components/UI/Product";
+import ProductBanner from "@/components/UI/ProductBanner";
+import Link from "next/link";
 
-function ProductDetailPage({ products }) {
-  console.log("Dynamic", products);
-  return <div>Product Details Page</div>;
+function DynamicProductPage() {
+  return (
+    <div>
+      <div>
+        <div class="flex">
+          <div class="w-1/5 bg-white h-screen p-4">
+            <hr className="my-10" />
+            <h1 className="text-2xl font-bold">Categories</h1>
+
+            <div className="ml-5">
+              {" "}
+              <li className="hover:text-success my-3">
+                <Link href="/product/processor">CPU/Processor</Link>
+              </li>
+              <li className="hover:text-success my-3">
+                <Link href="/product/motherboard">Motherboard</Link>
+              </li>
+              <li className="hover:text-success my-3">
+                <Link href="/product/ram">RAM</Link>
+              </li>
+              <li className="hover:text-success my-3">
+                <Link href="/product/power-supply">Power Supply Unit</Link>
+              </li>
+              <li className="hover:text-success my-3">
+                <Link href="/product/storage">Storage Device</Link>
+              </li>
+              <li className="hover:text-success my-3">
+                <Link href="/product/monitor">Monitor</Link>
+              </li>
+              <li className="hover:text-success my-3">
+                <Link href="/product/others">Others</Link>
+              </li>
+            </div>
+            <div>
+              <hr className="my-10" />
+              <h1 className="text-2xl font-bold">Latest Posts</h1>
+            </div>
+          </div>
+          <div class="w-4/5 bg-gray-100 p-4">
+            {/* ----------------Main Page-------------- */}
+            <ProductBanner />
+            <ProductHomePage />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default ProductDetailPage;
+export default DynamicProductPage;
 
-ProductDetailPage.getLayout = function getLayout(page) {
-  return <RootLayout>{page}</RootLayout>;
-};
-
-export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/products");
-  const data = await res.json();
-
-  const paths = data?.map((category) => ({
-    params: { categoryName: category.name },
-  }));
-  return {
-    paths,
-    fallback: false,
-  };
-};
-export const getStaticProps = async () => {
-  const { categoryName } = params;
-  const res = await fetch(
-    `http://localhost:3000/api/products?categoryName=${categoryName}`
-  );
-  const data = await res.json();
-
-  // const response = await fetch("http://localhost:5000/featureProducts");
-  // const featureProducts = await response.json();
-  return {
-    props: {
-      products: data,
-      // featureProducts: featureProducts,
-    },
-    revalidate: 30000,
-  };
+DynamicProductPage.getLayout = function getLayout(page) {
+  return <ProductLayout>{page}</ProductLayout>;
 };

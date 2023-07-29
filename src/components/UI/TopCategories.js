@@ -7,6 +7,7 @@ import mouse from "@/assets/Categories/mouse.png";
 import keyboard from "@/assets/Categories/keyboard.png";
 import powersupply from "@/assets/Categories/powersupply.png";
 import Image from "next/image";
+import Link from "next/link";
 
 function TopCategories() {
   return (
@@ -20,48 +21,73 @@ function TopCategories() {
       <hr />
       <br />
       <div className="flex justify-between gap-5">
-        <div className="col-span-1 mr-10 mx-auto  ">
-          <Image src={monitor} alt="monitor" className="w-32  " />
-          <div className="text-center mt-5">
-            <h2>Monitor</h2>
+        <Link href="/product/monitor">
+          <div className="col-span-1 mr-10 mx-auto  ">
+            <Image src={monitor} alt="monitor" className="w-32  " />
+            <div className="text-center mt-5">
+              <h2>Monitor</h2>
+            </div>
           </div>
-        </div>
-        <div className="col-span-1 mr-10 mx-auto">
-          <Image src={motherboard} alt="motherboard" className="w-32" />
-          <div className="text-center mt-5">
-            <h2>Motherboard</h2>
+        </Link>
+        <Link href="/product/motherboard">
+          {" "}
+          <div className="col-span-1 mr-10 mx-auto">
+            <Image src={motherboard} alt="motherboard" className="w-32" />
+            <div className="text-center mt-5">
+              <h2>Motherboard</h2>
+            </div>
           </div>
-        </div>
-        <div className="col-span-1 mr-10 mx-auto">
-          <Image src={memory} alt="ram" className="w-32" />
-          <div className="text-center mt-5">
-            <h2>Memory</h2>
+        </Link>
+        <Link href="/product/ram">
+          <div className="col-span-1 mr-10 mx-auto">
+            <Image src={memory} alt="ram" className="w-32" />
+            <div className="text-center mt-5">
+              <h2>Memory</h2>
+            </div>
           </div>
-        </div>
-        <div className="col-span-1 mr-10 mx-auto">
-          <Image src={storage} alt="storage" className="w-32" />
-          <div className="text-center mt-5">
-            <h2>Storage</h2>
+        </Link>
+        <Link href="/product/storage">
+          <div className="col-span-1 mr-10 mx-auto">
+            <Image src={storage} alt="storage" className="w-32" />
+            <div className="text-center mt-5">
+              <h2>Storage</h2>
+            </div>
           </div>
-        </div>
-        <div className="col-span-1 mr-10 mx-auto">
-          <Image src={mouse} alt="mouse" className="w-32" />
-          <div className="text-center mt-5">
-            <h2>Mouse</h2>
+        </Link>
+        <Link href="/product/others">
+          {" "}
+          <div className="col-span-1 mr-10 mx-auto">
+            <Image src={mouse} alt="mouse" className="w-32" />
+            <div className="text-center mt-5">
+              <h2>Mouse</h2>
+            </div>
           </div>
-        </div>
-        <div className="col-span-1 mr-10 mx-auto">
+        </Link>
+        <Link href="/product/others">
+          {" "}
+          <div className="col-span-1 mr-10 mx-auto">
+            <Image src={keyboard} alt="keyboard" className="w-32" />
+            <div className="text-center mt-5">
+              <h2>Keyboard</h2>
+            </div>
+          </div>
+        </Link>
+        <Link href="/product/power-supply">
+          {" "}
+          <div className="col-span-1 mr-10 mx-auto">
+            <Image src={powersupply} alt="powersupply" className="w-32" />
+            <div className="text-center mt-5">
+              <h2>Power Supply</h2>
+            </div>
+          </div>
+        </Link>
+
+        {/* <div className="col-span-1 mr-10 mx-auto">
           <Image src={keyboard} alt="keyboard" className="w-32" />
           <div className="text-center mt-5">
             <h2>Keyboard</h2>
           </div>
-        </div>
-        <div className="col-span-1 mr-10 mx-auto">
-          <Image src={powersupply} alt="powersupply" className="w-32" />
-          <div className="text-center mt-5">
-            <h2>Power Supply</h2>
-          </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

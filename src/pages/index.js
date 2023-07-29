@@ -4,12 +4,12 @@ import FeatureProducts from "@/components/UI/FeaturedProducts";
 import TopCategories from "@/components/UI/TopCategories";
 
 function HomePage({ products }) {
-  // console.log("products", products?.data);
+  console.log("products", products);
   return (
     <div>
       <HomePageBanner />
       <TopCategories />
-      <FeatureProducts products={products.data} />
+      <FeatureProducts products={products} />
     </div>
   );
 }
@@ -21,15 +21,12 @@ HomePage.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/products");
+  const res = await fetch("http://localhost:5000/products");
   const data = await res.json();
 
-  // const response = await fetch("http://localhost:5000/featureProducts");
-  // const featureProducts = await response.json();
   return {
     props: {
       products: data,
-      // featureProducts: featureProducts,
     },
     revalidate: 30000,
   };
