@@ -23,7 +23,7 @@ function ProductHomePage({ categories }) {
               <p className="text-xl">Category: {category?.categoryName}</p>
               <p className="text-xl">Price: {category?.price}</p>
               <div className="">
-                <Link href={`/details/${category?._id}`}>
+                <Link href={`/products/${category?._id}`}>
                   <button className="btn bg-emerald-300 text-white hover:bg-emerald-400 w-full">
                     View Details
                   </button>

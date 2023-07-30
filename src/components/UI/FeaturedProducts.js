@@ -26,7 +26,7 @@ function FeatureProducts({ products }) {
             <>
               {product?.categoryName === "Processor" && (
                 <>
-                  <Link href={`/details/${product?._id}`}>
+                  <Link href={`/products/${product?._id}`}>
                     <div className="">
                       <div className=" p-5 rounded-2xl ">
                         <picture>
@@ -68,7 +68,7 @@ function FeatureProducts({ products }) {
             <>
               {product?.categoryName === "Motherboard" && (
                 <>
-                  <Link href={`/details/${product?._id}`} key={product?._id}>
+                  <Link href={`/products/${product?._id}`} key={product?._id}>
                     <div className="">
                       <div className=" p-5 rounded-2xl ">
                         <picture>
@@ -110,7 +110,7 @@ function FeatureProducts({ products }) {
             <>
               {product?.categoryName === "RAM" && (
                 <>
-                  <Link href={`/details/${product?._id}`} key={product?._id}>
+                  <Link href={`/products/${product?._id}`} key={product?._id}>
                     <div className="">
                       <div className=" p-5 rounded-2xl ">
                         <picture>
@@ -152,7 +152,7 @@ function FeatureProducts({ products }) {
             <>
               {product?.categoryName === "Power Supply Unit" && (
                 <>
-                  <Link href={`/details/${product?._id}`} key={product?._id}>
+                  <Link href={`/products/${product?._id}`} key={product?._id}>
                     <div className="">
                       <div className=" p-5 rounded-2xl ">
                         <picture>
@@ -194,7 +194,7 @@ function FeatureProducts({ products }) {
             <>
               {product?.categoryName === "Storage Device" && (
                 <>
-                  <Link href={`/details/${product?._id}`} key={product?._id}>
+                  <Link href={`/products/${product?._id}`} key={product?._id}>
                     <div className="">
                       <div className=" p-5 rounded-2xl ">
                         <picture>
@@ -236,7 +236,7 @@ function FeatureProducts({ products }) {
             <>
               {product?.categoryName === "Monitor" && (
                 <>
-                  <Link href={`/details/${product?._id}`} key={product?._id}>
+                  <Link href={`/products/${product?._id}`} key={product?._id}>
                     <div className="">
                       <div className=" p-5 rounded-2xl ">
                         <picture>
@@ -278,7 +278,7 @@ function FeatureProducts({ products }) {
             <>
               {product?.categoryName === "GPU" && (
                 <>
-                  <Link href={`/details/${product?._id}`} key={product?._id}>
+                  <Link href={`/products/${product?._id}`} key={product?._id}>
                     <div className="">
                       <div className=" p-5 rounded-2xl ">
                         <picture>
@@ -320,7 +320,7 @@ function FeatureProducts({ products }) {
             <>
               {product?.categoryName === "Mouse" && (
                 <>
-                  <Link href={`/details/${product?._id}`} key={product?._id}>
+                  <Link href={`/products/${product?._id}`} key={product?._id}>
                     <div className="">
                       <div className=" p-5 rounded-2xl ">
                         <picture>

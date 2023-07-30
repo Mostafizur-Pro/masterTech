@@ -20,41 +20,41 @@ function CategoryName({ categories }) {
             <div className="ml-5">
               {" "}
               <li className="hover:text-success my-3">
-                <Link href="/product/Processor">CPU/Processor</Link>
+                <Link href="/category/Processor">CPU/Processor</Link>
               </li>
               <hr />
               <li className="hover:text-success my-3">
-                <Link href="/product/Motherboard">Motherboard</Link>
+                <Link href="/category/Motherboard">Motherboard</Link>
               </li>
               <hr />
               <li className="hover:text-success my-3">
-                <Link href="/product/RAM">RAM</Link>
+                <Link href="/category/RAM">RAM</Link>
               </li>
               <hr />
               <li className="hover:text-success my-3">
-                <Link href="/product/Power%20Supply%20Unit">
+                <Link href="/category/Power%20Supply%20Unit">
                   Power Supply Unit
                 </Link>
               </li>
               <hr />
               <li className="hover:text-success my-3">
-                <Link href="/product/Storage%20Device">Storage Device</Link>
+                <Link href="/category/Storage%20Device">Storage Device</Link>
               </li>
               <hr />
               <li className="hover:text-success my-3">
-                <Link href="/product/Monitor">Monitor</Link>
+                <Link href="/category/Monitor">Monitor</Link>
               </li>
               <hr />
               <li className="hover:text-success my-3">
-                <Link href="/product/GPU">GPU</Link>
+                <Link href="/category/GPU">GPU</Link>
               </li>
               <hr />
               <li className="hover:text-success my-3">
-                <Link href="/product/Mouse">Mouse</Link>
+                <Link href="/category/Mouse">Mouse</Link>
               </li>
               <hr />
               <li className="hover:text-success my-3">
-                <Link href="/product/Keyboard">Keyboard</Link>
+                <Link href="/category/Keyboard">Keyboard</Link>
               </li>
             </div>
             <div>
@@ -101,6 +101,6 @@ export const getStaticProps = async ({ params }) => {
     props: {
       categories: data,
     },
-    revalidate: 30000,
+    revalidate: 3,
   };
 };

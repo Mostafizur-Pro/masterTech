@@ -2,7 +2,7 @@ import RootLayout from "@/components/Layouts/RootLayout";
 import Head from "next/head";
 
 const ProductDetails = ({ product }) => {
-  // console.log(product);
+  // console.log(product?.keys[0]);
   const { keys } = product;
   return (
     <div className="mx-20">
@@ -163,15 +163,14 @@ const ProductDetails = ({ product }) => {
             </h1>
             <div className="mt-5">
               <h1 className="text-3xl font-bold">Quick Overview</h1>
-              {keys?.map((key, i) => (
-                <div className="ml-5 mt-2 text-xl" key={i}>
-                  <li>Model: {key?.model}</li>
-                  <li>Cache Memory: {key?.cache}</li>
-                  <li>Specification: {key?.specification}</li>
-                  <li>Speed: {key?.speed}</li>
-                  <li>Type: {key?.type}</li>
-                </div>
-              ))}
+              <div className="ml-5 mt-2 text-lg">
+                <li>Model: {keys[0]?.model}</li>
+                <li>Cache Memory: {keys[0]?.cache}</li>
+                <li>Specification: {keys[0]?.specification}</li>
+                <li>Speed: {keys[0]?.speed}</li>
+                <li>Type: {keys[0]?.type}</li>
+              </div>
+
               <h2 className="text-xl bg-gray-400 mt-5 p-3 w-2/4 text-white font-bold rounded-lg">
                 Price Tk {product?.price}
               </h2>
@@ -227,7 +226,7 @@ const ProductDetails = ({ product }) => {
             </div>
             <div className="ml-10">
               <label className="label">
-                <span className="label-text">Mostafizur</span>
+                <span className="label-text">Mostafizur Rahman</span>
               </label>
               <input
                 type="text"
@@ -243,6 +242,10 @@ const ProductDetails = ({ product }) => {
 };
 
 export default ProductDetails;
+
+ProductDetails.getLayout = function getLayout(page) {
+  return <RootLayout>{page}</RootLayout>;
+};
 
 export const getStaticPaths = async () => {
   const res = await fetch(`http://localhost:5000/products`);
@@ -264,9 +267,6 @@ export const getStaticProps = async (context) => {
     props: {
       product: data,
     },
+    revalidate: 3,
   };
-};
-
-ProductDetails.getLayout = function getLayout(page) {
-  return <RootLayout>{page}</RootLayout>;
 };
