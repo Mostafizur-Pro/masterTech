@@ -11,7 +11,9 @@ function ProductHomePage({ categories }) {
             className="card card-compact w-96 bg-base-100 shadow-xl"
           >
             <figure>
-              <img src={category?.imageUrl} alt="product" />
+              <picture>
+                <img src={category?.imageUrl} alt="product" />
+              </picture>
             </figure>
             <div className="card-body">
               <h2 className="card-title">{category?.name}</h2>

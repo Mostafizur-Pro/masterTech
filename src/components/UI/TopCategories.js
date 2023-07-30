@@ -13,7 +13,7 @@ function TopCategories() {
   return (
     <div className="mt-20 mx-20 ">
       <div className="text-center my-10">
-        <h1 className="text-4xl font-bold  font-semibold">Top Categories</h1>
+        <h1 className="text-4xl font-bold ">Top Categories</h1>
         <p className="text-lg mt-2">
           Get Your Desired Product from Featured Category!
         </p>

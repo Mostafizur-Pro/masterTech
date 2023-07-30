@@ -1,4 +1,9 @@
+import Image from "next/image";
 import CustomButton from "../hooks/Button";
+import motherboard from "@/assets/Slider/motherboard.png";
+import ram from "@/assets/Slider/ram.png";
+import monitor from "@/assets/Slider/monitor.png";
+import powersupply from "@/assets/Slider/powersupply.png";
 
 function HomePageBanner() {
   return (
@@ -7,8 +12,8 @@ function HomePageBanner() {
         <div id="slide1" className="carousel-item relative w-full">
           <div className="hero mx-16">
             <div className="hero-content flex-col lg:flex-row-reverse">
-              <img
-                src="https://www.pngkey.com/png/full/221-2217324_boost-your-fps-best-gaming-motherboard-2018.png"
+              <Image
+                src={motherboard}
                 className="rounded-lg lg:w-1/2 "
                 alt="motherboard"
               />
@@ -43,8 +48,8 @@ function HomePageBanner() {
                 </p>
                 <CustomButton>Getting Started </CustomButton>
               </div>
-              <img
-                src="https://www.pngall.com/wp-content/uploads/5/Gaming-RAM-PNG-Image.png"
+              <Image
+                src={ram}
                 className="rounded-lg lg:w-1/2 "
                 alt="motherboard"
               />
@@ -62,8 +67,8 @@ function HomePageBanner() {
         <div id="slide3" className="carousel-item relative w-full">
           <div className="hero mx-16">
             <div className="hero-content flex-col lg:flex-row-reverse">
-              <img
-                src="https://www.pngkey.com/png/full/250-2505279_monitor-msi-optix-mpg27c-27-curved-gaming-monitor.png"
+              <Image
+                src={monitor}
                 className="rounded-lg lg:w-1/2 "
                 alt="motherboard"
               />
@@ -101,8 +106,8 @@ function HomePageBanner() {
                 </p>
                 <CustomButton>Getting Started </CustomButton>
               </div>
-              <img
-                src="https://www.gigabyte.com/FileUpload/global/News/1826/o202009012042092741.png"
+              <Image
+                src={powersupply}
                 className="rounded-lg lg:w-1/2 "
                 alt="motherboard"
               />

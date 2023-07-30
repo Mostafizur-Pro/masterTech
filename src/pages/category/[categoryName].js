@@ -1,40 +1,60 @@
 import RootLayout from "@/components/Layouts/RootLayout";
 import ProductHomePage from "@/components/UI/Product";
 import ProductBanner from "@/components/UI/ProductBanner";
+import Head from "next/head";
 import Link from "next/link";
 
 function CategoryName({ categories }) {
   // console.log(categories);
   return (
     <div>
-      <div>
+      <Head>
+        <title>Category-MasterTECH</title>
+      </Head>
+      <div className="bg-white">
         <div class="flex">
-          <div class="w-1/5 bg-white h-screen p-4">
+          <div class="w-1/5  h-screen p-4">
             <hr className="my-10" />
             <h1 className="text-2xl font-bold">Categories</h1>
 
             <div className="ml-5">
               {" "}
               <li className="hover:text-success my-3">
-                <Link href="/product/processor">CPU/Processor</Link>
+                <Link href="/product/Processor">CPU/Processor</Link>
               </li>
+              <hr />
               <li className="hover:text-success my-3">
-                <Link href="/product/motherboard">Motherboard</Link>
+                <Link href="/product/Motherboard">Motherboard</Link>
               </li>
+              <hr />
               <li className="hover:text-success my-3">
-                <Link href="/product/ram">RAM</Link>
+                <Link href="/product/RAM">RAM</Link>
               </li>
+              <hr />
               <li className="hover:text-success my-3">
-                <Link href="/product/power-supply">Power Supply Unit</Link>
+                <Link href="/product/Power%20Supply%20Unit">
+                  Power Supply Unit
+                </Link>
               </li>
+              <hr />
               <li className="hover:text-success my-3">
-                <Link href="/product/storage">Storage Device</Link>
+                <Link href="/product/Storage%20Device">Storage Device</Link>
               </li>
+              <hr />
               <li className="hover:text-success my-3">
-                <Link href="/product/monitor">Monitor</Link>
+                <Link href="/product/Monitor">Monitor</Link>
               </li>
+              <hr />
               <li className="hover:text-success my-3">
-                <Link href="/product/others">Others</Link>
+                <Link href="/product/GPU">GPU</Link>
+              </li>
+              <hr />
+              <li className="hover:text-success my-3">
+                <Link href="/product/Mouse">Mouse</Link>
+              </li>
+              <hr />
+              <li className="hover:text-success my-3">
+                <Link href="/product/Keyboard">Keyboard</Link>
               </li>
             </div>
             <div>

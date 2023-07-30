@@ -6,6 +6,8 @@ import auth from "@/firebase/firebase.auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut as firebaseSignOut } from "firebase/auth";
 import { useSession, signOut } from "next-auth/react";
+import Image from "next/image";
+import profile from "@/assets/profile/profile.jpg";
 
 function Navbar() {
   const [user, loading, error] = useAuthState(auth);
@@ -141,7 +143,12 @@ function Navbar() {
                     className="btn btn-ghost btn-circle avatar"
                   >
                     <div className="w-10 rounded-full">
-                      <img src="https://i.ibb.co/hKM32TN/01.jpg" />
+                      <Image
+                        src={profile}
+                        alt="image"
+                        width={100}
+                        height={100}
+                      />
                     </div>
                   </label>
                   <ul

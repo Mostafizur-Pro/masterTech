@@ -7,6 +7,7 @@ import auth from "@/firebase/firebase.auth";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Head from "next/head";
 
 function SignUp() {
   const notify = () => toast("SignUp Successfully");
@@ -20,13 +21,16 @@ function SignUp() {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     createUserWithEmailAndPassword(data.email, data.password);
     notify();
   };
   return (
     <div>
-      {" "}
+      <Head>
+        {" "}
+        <title>Register-MasterTECH</title>
+      </Head>
       <div className="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>

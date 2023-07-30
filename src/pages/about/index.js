@@ -126,11 +126,14 @@ function AboutHomePage() {
           </aside>
           <aside className="lg:grid lg:col-span-6 lg:w-[70%] mx-auto justify-end px-7 lg:px-0">
             <div className="border rounded-full p-7">
-              <img
-                className="rounded-full border"
-                src="https://i.ibb.co/hKM32TN/01.jpg"
-                alt="profile image"
-              />
+              <picture>
+                {" "}
+                <img
+                  className="rounded-full border"
+                  src="https://i.ibb.co/hKM32TN/01.jpg"
+                  alt="profile image"
+                />
+              </picture>
             </div>
           </aside>
         </div>

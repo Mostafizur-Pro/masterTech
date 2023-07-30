@@ -1,7 +1,16 @@
 import RootLayout from "@/components/Layouts/RootLayout";
+import Head from "next/head";
 
 function PCBuilder() {
-  return <div>hi</div>;
+  return (
+    <div>
+      <Head>
+        {" "}
+        <title>PC Builder-MasterTECH</title>
+      </Head>
+      hi
+    </div>
+  );
 }
 
 export default PCBuilder;

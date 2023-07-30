@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -5,11 +6,11 @@ function FeatureProducts({ products }) {
   if (!products) {
     return <div>Loading...</div>;
   }
-  console.log("pro", products);
+  // console.log("pro", products);
   return (
     <div className="my-20 mx-20 ">
       <div className="text-center my-10">
-        <h1 className="text-4xl font-bold  font-semibold">Featured Products</h1>
+        <h1 className="text-4xl font-bold ">Featured Products</h1>
         <p className="text-lg mt-2">Check & Get Your Desired Product!</p>
       </div>
       {/* Processor */}
@@ -28,7 +29,13 @@ function FeatureProducts({ products }) {
                   <Link href={`/details/${product?._id}`}>
                     <div className="">
                       <div className=" p-5 rounded-2xl ">
-                        <img className="w-48" src={product?.imageUrl} alt="" />
+                        <picture>
+                          <img
+                            className="w-48"
+                            src={product?.imageUrl}
+                            alt="motherboard"
+                          />
+                        </picture>
                         <h3 className="text-lg font-semibold">
                           {product?.name}
                           <div className="badge badge-accent ml-2">
@@ -64,7 +71,13 @@ function FeatureProducts({ products }) {
                   <Link href={`/details/${product?._id}`} key={product?._id}>
                     <div className="">
                       <div className=" p-5 rounded-2xl ">
-                        <img className="w-48" src={product?.imageUrl} alt="" />
+                        <picture>
+                          <img
+                            className="w-48"
+                            src={product?.imageUrl}
+                            alt="motherboard"
+                          />
+                        </picture>
                         <h3 className="text-lg font-semibold">
                           {product?.name}
                           <div className="badge badge-accent ml-2">
@@ -100,7 +113,13 @@ function FeatureProducts({ products }) {
                   <Link href={`/details/${product?._id}`} key={product?._id}>
                     <div className="">
                       <div className=" p-5 rounded-2xl ">
-                        <img className="w-48" src={product?.imageUrl} alt="" />
+                        <picture>
+                          <img
+                            className="w-48"
+                            src={product?.imageUrl}
+                            alt="motherboard"
+                          />
+                        </picture>
                         <h3 className="text-lg font-semibold">
                           {product?.name}
                           <div className="badge badge-accent ml-2">
@@ -136,7 +155,13 @@ function FeatureProducts({ products }) {
                   <Link href={`/details/${product?._id}`} key={product?._id}>
                     <div className="">
                       <div className=" p-5 rounded-2xl ">
-                        <img className="w-48" src={product?.imageUrl} alt="" />
+                        <picture>
+                          <img
+                            className="w-48"
+                            src={product?.imageUrl}
+                            alt="motherboard"
+                          />
+                        </picture>
                         <h3 className="text-lg font-semibold">
                           {product?.name}
                           <div className="badge badge-accent ml-2">
@@ -172,7 +197,13 @@ function FeatureProducts({ products }) {
                   <Link href={`/details/${product?._id}`} key={product?._id}>
                     <div className="">
                       <div className=" p-5 rounded-2xl ">
-                        <img className="w-48" src={product?.imageUrl} alt="" />
+                        <picture>
+                          <img
+                            className="w-48"
+                            src={product?.imageUrl}
+                            alt="motherboard"
+                          />
+                        </picture>
                         <h3 className="text-lg font-semibold">
                           {product?.name}
                           <div className="badge badge-accent ml-2">
@@ -208,7 +239,13 @@ function FeatureProducts({ products }) {
                   <Link href={`/details/${product?._id}`} key={product?._id}>
                     <div className="">
                       <div className=" p-5 rounded-2xl ">
-                        <img className="w-48" src={product?.imageUrl} alt="" />
+                        <picture>
+                          <img
+                            className="w-48"
+                            src={product?.imageUrl}
+                            alt="motherboard"
+                          />
+                        </picture>
                         <h3 className="text-lg font-semibold">
                           {product?.name}
                           <div className="badge badge-accent ml-2">
@@ -244,7 +281,13 @@ function FeatureProducts({ products }) {
                   <Link href={`/details/${product?._id}`} key={product?._id}>
                     <div className="">
                       <div className=" p-5 rounded-2xl ">
-                        <img className="w-48" src={product?.imageUrl} alt="" />
+                        <picture>
+                          <img
+                            className="w-48"
+                            src={product?.imageUrl}
+                            alt="motherboard"
+                          />
+                        </picture>
                         <h3 className="text-lg font-semibold">
                           {product?.name}
                           <div className="badge badge-accent ml-2">
@@ -280,7 +323,13 @@ function FeatureProducts({ products }) {
                   <Link href={`/details/${product?._id}`} key={product?._id}>
                     <div className="">
                       <div className=" p-5 rounded-2xl ">
-                        <img className="w-48" src={product?.imageUrl} alt="" />
+                        <picture>
+                          <img
+                            className="w-48"
+                            src={product?.imageUrl}
+                            alt="motherboard"
+                          />
+                        </picture>
                         <h3 className="text-lg font-semibold">
                           {product?.name}
                           <div className="badge badge-accent ml-2">
@@ -316,7 +365,13 @@ function FeatureProducts({ products }) {
                   <Link href={`/product/${product?.name}`} key={product?._id}>
                     <div className="">
                       <div className=" p-5 rounded-2xl ">
-                        <img className="w-48" src={product?.imageUrl} alt="" />
+                        <picture>
+                          <img
+                            className="w-48"
+                            src={product?.imageUrl}
+                            alt="motherboard"
+                          />
+                        </picture>
                         <h3 className="text-lg font-semibold">
                           {product?.name}
                           <div className="badge badge-accent ml-2">

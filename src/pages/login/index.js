@@ -7,6 +7,7 @@ import auth from "@/firebase/firebase.auth";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { signIn } from "next-auth/react";
+import Head from "next/head";
 
 function LoginPage() {
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -18,12 +19,16 @@ function LoginPage() {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     signInWithEmailAndPassword(data.email, data.password);
     // Add login logic here
   };
   return (
     <div className="min-h-screen flex items-center justify-center bg-white py-12 px-4 sm:px-6 lg:px-8">
+      <Head>
+        {" "}
+        <title>Login-MasterTECH</title>
+      </Head>
       <div className="max-w-md w-full space-y-8">
         <div>
           <Image className="mx-auto h-72 w-auto" src={loginImage} alt="Logo" />
@@ -70,7 +75,7 @@ function LoginPage() {
                 </p>
               )}
               <p className="text-gray-400 mt-2">
-                Don't have any account?
+                Do not have any account?
                 <Link href="/signup" className="text-green-400 font-bold">
                   Sign Up.
                 </Link>

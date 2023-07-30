@@ -1,13 +1,20 @@
 import RootLayout from "@/components/Layouts/RootLayout";
+import Head from "next/head";
 
 const ProductDetails = ({ product }) => {
-  console.log(product);
+  // console.log(product);
+  const { keys } = product;
   return (
     <div className="mx-20">
+      <Head>
+        <title>Details-MasterTECH</title>
+      </Head>
       <div className="mt-10">
         <div className="grid grid-cols-2 gap-10">
           <div className="col-span-1">
-            <img src={product?.imageUrl} alt="image" />
+            <picture>
+              <img src={product?.imageUrl} alt="image" />
+            </picture>
           </div>
           <div className="col-span-1">
             <h1 className="text-2xl">{product?.name}</h1>
@@ -156,13 +163,13 @@ const ProductDetails = ({ product }) => {
             </h1>
             <div className="mt-5">
               <h1 className="text-3xl font-bold">Quick Overview</h1>
-              {product?.keys?.map((key, i) => (
+              {keys?.map((key, i) => (
                 <div className="ml-5 mt-2 text-xl" key={i}>
-                  <li>Model: {key.model}</li>
-                  <li>Cache Memory: {key.cache}</li>
-                  <li>Specification: {key.specification}</li>
-                  <li>Speed: {key.speed}</li>
-                  <li>Type: {key.type}</li>
+                  <li>Model: {key?.model}</li>
+                  <li>Cache Memory: {key?.cache}</li>
+                  <li>Specification: {key?.specification}</li>
+                  <li>Speed: {key?.speed}</li>
+                  <li>Type: {key?.type}</li>
                 </div>
               ))}
               <h2 className="text-xl bg-gray-400 mt-5 p-3 w-2/4 text-white font-bold rounded-lg">
@@ -187,7 +194,10 @@ const ProductDetails = ({ product }) => {
               <div className="chat chat-start text-2xl my-10">
                 <div className="chat-image avatar">
                   <div className="w-20 rounded-full">
-                    <img src={d?.user} />
+                    <picture>
+                      {" "}
+                      <img src={d?.user} alt="image" />
+                    </picture>
                   </div>
                 </div>
                 <div className="chat-header text-xl">
@@ -206,7 +216,13 @@ const ProductDetails = ({ product }) => {
           <div className="justify-start items-center flex w-full max-w-xs">
             <div className=" avatar">
               <div className="w-20 rounded-full">
-                <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?cs=srgb&dl=pexels-italo-melo-2379005.jpg&fm=jpg" />
+                <picture>
+                  {" "}
+                  <img
+                    src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?cs=srgb&dl=pexels-italo-melo-2379005.jpg&fm=jpg"
+                    alt="image"
+                  />
+                </picture>
               </div>
             </div>
             <div className="ml-10">

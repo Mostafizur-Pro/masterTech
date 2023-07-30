@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
@@ -9,6 +10,10 @@ function NotFoundPage() {
   }, 5000);
   return (
     <div>
+      <Head>
+        {" "}
+        <title>404 Error-MasterTECH</title>
+      </Head>
       <div class="flex items-center justify-center h-screen">
         <div class="bg-white p-8 rounded-lg shadow-lg text-center">
           <h1 class="text-6xl font-bold text-red-500">404</h1>
