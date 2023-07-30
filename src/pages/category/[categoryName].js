@@ -79,7 +79,7 @@ CategoryName.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:5000/categories");
+  const res = await fetch("http://localhost:5000/category");
   const data = await res.json();
 
   const paths = data.map((category) => ({
@@ -94,7 +94,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const { categoryName } = params;
   const res = await fetch(
-    `http://localhost:5000/category?categoryName=${categoryName}`
+    `http://localhost:5000/categories?categoryName=${categoryName}`
   );
   const data = await res.json();
   return {

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa";
 
 function ProductBanner({ categories }) {
-  // console.log("Pro", categories);
+  console.log("Pro", categories);
   return (
     <div>
       <div
