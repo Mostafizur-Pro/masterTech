@@ -24,31 +24,39 @@ function Navbar() {
           <summary>Component</summary>
           <ul className="w-60 p-2  bg-white  z-40">
             <li>
-              <Link href="/product/processor">CPU/Processor</Link>
+              <Link href="/product/Processor">CPU/Processor</Link>
             </li>
             <hr />
             <li>
-              <Link href="/product/motherboard">Motherboard</Link>
+              <Link href="/product/Motherboard">Motherboard</Link>
             </li>
             <hr />
             <li>
-              <Link href="/product/ram">RAM</Link>
+              <Link href="/product/RAM">RAM</Link>
             </li>
             <hr />
             <li>
-              <Link href="/product/power-supply">Power Supply Unit</Link>
+              <Link href="/product/Power%20Supply%20Unit">
+                Power Supply Unit
+              </Link>
             </li>
             <hr />
             <li>
-              <Link href="/product/storage">Storage Device</Link>
+              <Link href="/product/Storage%20Device">Storage Device</Link>
             </li>
             <hr />
             <li>
-              <Link href="/product/monitor">Monitor</Link>
+              <Link href="/product/Monitor">Monitor</Link>
             </li>
             <hr />
             <li>
-              <Link href="/product/others">Others</Link>
+              <Link href="/product/GPU">GPU</Link>
+            </li>
+            <li>
+              <Link href="/product/Mouse">Mouse</Link>
+            </li>
+            <li>
+              <Link href="/product/Keyboard">Keyboard</Link>
             </li>
           </ul>
         </details>

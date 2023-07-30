@@ -21,7 +21,7 @@ function TopCategories() {
       <hr />
       <br />
       <div className="flex justify-between gap-5">
-        <Link href="/product/monitor">
+        <Link href="/category/Monitor">
           <div className="col-span-1 mr-10 mx-auto  ">
             <Image src={monitor} alt="monitor" className="w-32  " />
             <div className="text-center mt-5">
@@ -29,7 +29,7 @@ function TopCategories() {
             </div>
           </div>
         </Link>
-        <Link href="/product/motherboard">
+        <Link href="/category/Motherboard">
           {" "}
           <div className="col-span-1 mr-10 mx-auto">
             <Image src={motherboard} alt="motherboard" className="w-32" />
@@ -38,7 +38,7 @@ function TopCategories() {
             </div>
           </div>
         </Link>
-        <Link href="/product/ram">
+        <Link href="/category/RAM">
           <div className="col-span-1 mr-10 mx-auto">
             <Image src={memory} alt="ram" className="w-32" />
             <div className="text-center mt-5">
@@ -46,7 +46,7 @@ function TopCategories() {
             </div>
           </div>
         </Link>
-        <Link href="/product/storage">
+        <Link href="/category/Storage%20Device">
           <div className="col-span-1 mr-10 mx-auto">
             <Image src={storage} alt="storage" className="w-32" />
             <div className="text-center mt-5">
@@ -54,7 +54,7 @@ function TopCategories() {
             </div>
           </div>
         </Link>
-        <Link href="/product/others">
+        <Link href="/category/Mouse">
           {" "}
           <div className="col-span-1 mr-10 mx-auto">
             <Image src={mouse} alt="mouse" className="w-32" />
@@ -63,7 +63,7 @@ function TopCategories() {
             </div>
           </div>
         </Link>
-        <Link href="/product/others">
+        <Link href="/category/Keyboard">
           {" "}
           <div className="col-span-1 mr-10 mx-auto">
             <Image src={keyboard} alt="keyboard" className="w-32" />
@@ -72,7 +72,7 @@ function TopCategories() {
             </div>
           </div>
         </Link>
-        <Link href="/product/power-supply">
+        <Link href="/category/Power%20Supply%20Unit">
           {" "}
           <div className="col-span-1 mr-10 mx-auto">
             <Image src={powersupply} alt="powersupply" className="w-32" />

@@ -12,31 +12,39 @@ function Sidebar() {
           <summary>Component</summary>
           <ul className="w-60 p-2  bg-white  z-40">
             <li>
-              <Link href="/product/processor">CPU/Processor</Link>
+              <Link href="/category/Processor">CPU/Processor</Link>
             </li>
             <hr />
             <li>
-              <Link href="/product/motherboard">Motherboard</Link>
+              <Link href="/category/Motherboard">Motherboard</Link>
             </li>
             <hr />
             <li>
-              <Link href="/product/ram">RAM</Link>
+              <Link href="/category/RAM">RAM</Link>
             </li>
             <hr />
             <li>
-              <Link href="/product/power-supply">Power Supply Unit</Link>
+              <Link href="/category/Power%20Supply%20Unit">
+                Power Supply Unit
+              </Link>
             </li>
             <hr />
             <li>
-              <Link href="/product/storage">Storage Device</Link>
+              <Link href="/category/Storage%20Device">Storage Device</Link>
             </li>
             <hr />
             <li>
-              <Link href="/product/monitor">Monitor</Link>
+              <Link href="/category/Monitor">Monitor</Link>
             </li>
             <hr />
             <li>
-              <Link href="/product/others">Others</Link>
+              <Link href="/category/GPU">GPU</Link>
+            </li>
+            <li>
+              <Link href="/category/Mouse">Mouse</Link>
+            </li>
+            <li>
+              <Link href="/category/Keyboard">Keyboard</Link>
             </li>
           </ul>
         </details>

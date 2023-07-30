@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa";
 
-function ProductBanner() {
+function ProductBanner({ categories }) {
+  console.log("Pro", categories);
   return (
     <div>
       <div
@@ -11,11 +12,13 @@ function ProductBanner() {
         }}
       >
         <div className="hero-overlay bg-opacity-30"></div>
-        <div className=" grid grid-cols-6 justify-between ">
-          <div className=" text-white ml-5  ">
-            <h1 className="mb-5 text-5xl font-bold">Products </h1>
+        <div className=" grid grid-cols-2 justify-between ">
+          <div className=" text-white ml-5   ">
+            <h1 className="mb-5 text-5xl font-bold w-full">
+              {categories[0].categoryName}{" "}
+            </h1>
 
-            <div className="flex gap-2 items-center  border-orange-400">
+            <div className="flex align-middle gap-2 items-center  border-orange-400">
               <Link href="/">Home </Link>
 
               <FaAngleRight />
